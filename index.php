@@ -24,6 +24,9 @@
     <link href="css/creative.min.css" rel="stylesheet">
     <link href="css/carousel.css" rel="stylesheet">
 
+
+    <script type="text/javascript" src="about.json"></script>
+    <script type="text/javascript" src="people.json"></script>
   </head>
 
   <body id="page-top">
@@ -51,6 +54,7 @@
       </div>
     </nav>
 
+
     <header class="masthead text-center text-white d-flex">
       <div class="container my-auto">
         <!-- <div class="row">
@@ -73,8 +77,9 @@
           <div class="col-lg-8 mx-auto text-center">
             <h2 class="section-heading text-white">About Us</h2>
             <hr class="light my-4">
-            <p class="text-faded mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget lobortis risus. Cras non sem in ante tempor euismod. Praesent tortor massa, interdum non nibh at, aliquet accumsan libero. Vestibulum venenatis aliquam laoreet. Curabitur sed convallis quam. Pellentesque lorem nisl, scelerisque mollis nunc eu, interdum convallis ante. Fusce sed laoreet felis.</p>
-            <a class="btn btn-light btn-xl js-scroll-trigger" href="http://nh.scripts.mit.edu/www/history.php">Button</a>
+            <!-- <p class="text-faded mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget lobortis risus. Cras non sem in ante tempor euismod. Praesent tortor massa, interdum non nibh at, aliquet accumsan libero. Vestibulum venenatis aliquam laoreet. Curabitur sed convallis quam. Pellentesque lorem nisl, scelerisque mollis nunc eu, interdum convallis ante. Fusce sed laoreet felis.</p> -->
+            <!-- <a class="btn btn-light btn-xl js-scroll-trigger" href="http://nh.scripts.mit.edu/www/history.php">Button</a> -->
+            <p class="text-faded mb-4" id="about_text"></p>
           </div>
         </div>
       </div>
@@ -91,9 +96,9 @@
                 <li data-target="#peopleCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#peopleCarousel" data-slide-to="1"></li>
               </ol>
-              <div class="carousel-inner" role="listbox">
-                <div class="carousel-item active">
-                  <div class="card-deck" style="">
+              <div class="carousel-inner" role="listbox" id="carousel-inner">
+                <!-- <div class="carousel-item active"> -->
+                  <!-- <div class="card-deck" style="">
                     <div class="card my-3">
                         <div class="card-body">
                           <h5 class="card-title">Desmondite 1</h5>
@@ -121,9 +126,9 @@
                         <h5 class="card-title">Desmondite 4</h5>
                         <p class="card-text">Words, probably about Desmondite 4 but idk.</p>
                       </div>
-                    </div>
-                  </div>
-                </div>
+                    </div> -->
+                  <!-- </div> -->
+                <!-- </div> -->
               </div>
             </div>
           </div>
@@ -155,6 +160,17 @@
 
     <!-- Custom scripts for this template -->
     <script src="js/creative.min.js"></script>
+
+    <script type="text/javascript">
+      // var about = JSON.parse(about);
+      var about_text = document.createTextNode(about[0].text);
+      var p = document.getElementById('about_text');
+      p.appendChild(about_text);
+    </script>
+
+    <script type="text/javascript">
+    
+    </script>
 
   </body>
 

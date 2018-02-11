@@ -1,0 +1,18 @@
+people = [
+{
+  "name": "Desmondite 1",
+  "bio": "Words, probably about Desmondite 1 but idk"
+},
+{
+  "name": "Desmondite 2",
+  "bio": "Words, probably about Desmondite 2 but idk"
+},
+{
+  "name": "Desmondite 3",
+  "bio": "Words, probably about Desmondite 3 but idk"
+},
+{
+  "name": "Desmondite 4",
+  "bio": "Words, probably about Desmondite 4 but idk"
+}
+]
