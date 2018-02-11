@@ -57,17 +57,6 @@
 
     <header class="masthead text-center text-white d-flex">
       <div class="container my-auto">
-        <!-- <div class="row">
-          <div class="col-lg-10 mx-auto">
-            <h1 class="text-uppercase">
-              <strong>Welcome to Desmond!</strong>
-            </h1>
-            <hr>
-          </div>
-          <div class="col-lg-8 mx-auto" style="margin-top: 500px">
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">Welcome to Desmond!</a>
-          </div>
-        </div> -->
       </div>
     </header>
 
@@ -91,44 +80,12 @@
           <div class="mx-auto text-center">
             <h2 class="section-heading text-black">People</h2>
             <hr class="my-4">
-            <div id="peopleCarousel" class="carousel slide" data-ride="carousel">
+            <div id="peopleCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
               <ol class="carousel-indicators hidden">
                 <li data-target="#peopleCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#peopleCarousel" data-slide-to="1"></li>
               </ol>
               <div class="carousel-inner" role="listbox" id="carousel-inner">
-                <!-- <div class="carousel-item active"> -->
-                  <!-- <div class="card-deck" style="">
-                    <div class="card my-3">
-                        <div class="card-body">
-                          <h5 class="card-title">Desmondite 1</h5>
-                          <p class="card-text">Words, probably about Desmondite 1 but idk.</p>
-                        </div>
-                    </div>
-                    <div class="card my-3">
-                      <div class="card-body">
-                        <h5 class="card-title">Desmondite 2</h5>
-                        <p class="card-text">Words, probably about Desmondite 2 but idk.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="carousel-item">
-                  <div class="card-deck" style="">
-                    <div class="card my-3">
-                        <div class="card-body">
-                          <h5 class="card-title">Desmondite 3</h5>
-                          <p class="card-text">Words, probably about Desmondite 3 but idk.</p>
-                        </div>
-                    </div>
-                    <div class="card my-3">
-                      <div class="card-body">
-                        <h5 class="card-title">Desmondite 4</h5>
-                        <p class="card-text">Words, probably about Desmondite 4 but idk.</p>
-                      </div>
-                    </div> -->
-                  <!-- </div> -->
-                <!-- </div> -->
               </div>
             </div>
           </div>
@@ -169,7 +126,46 @@
     </script>
 
     <script type="text/javascript">
-    
+      var carousel = document.getElementById('carousel-inner');
+      var num_cards = 3;
+      var num_slides = people.length/num_cards;
+      for(i=0; i < num_slides; i++){
+        var citem = document.createElement('div');
+        if(i == 0){
+          citem.setAttribute('class', 'carousel-item active');
+        }
+        else{
+          citem.setAttribute('class', 'carousel-item');
+        }
+        carousel.appendChild(citem);
+        var deck = document.createElement('div');
+        deck.setAttribute('class', 'card-deck');
+        citem.appendChild(deck);
+
+        var remaining = people.length - i*num_cards;
+
+        for(j = 0; j<Math.min(num_cards, remaining); j++){
+          var card = document.createElement('div');
+          card.setAttribute('class', 'card');
+          deck.appendChild(card);
+
+          var card_body = document.createElement('div');
+          card_body.setAttribute('class', 'card-body');
+          card.appendChild(card_body);
+
+          var title = document.createElement('h5');
+          title.setAttribute('class', 'card-title');
+          var title_text = document.createTextNode(people[num_cards*i+j].name);
+          title.appendChild(title_text);
+          card_body.appendChild(title);
+
+          var text = document.createElement('p');
+          text.setAttribute('class', 'card-text');
+          var card_text = document.createTextNode(people[num_cards*i+j].bio);
+          text.appendChild(card_text);
+          card_body.appendChild(text);
+        }
+      }
     </script>
 
   </body>
