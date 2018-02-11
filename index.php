@@ -22,6 +22,7 @@
 
     <!-- Custom styles for this template -->
     <link href="css/creative.min.css" rel="stylesheet">
+    <link href="css/carousel.css" rel="stylesheet">
 
   </head>
 
@@ -38,6 +39,9 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#people">People</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
@@ -76,9 +80,56 @@
       </div>
     </section>
 
-<?php
-    include(getcwd().'/people.php');
-?>
+    <section class="bg-white" id="people">
+      <div class="container">
+        <div class="row">
+          <div class="mx-auto text-center">
+            <h2 class="section-heading text-black">People</h2>
+            <hr class="my-4">
+            <div id="peopleCarousel" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators hidden">
+                <li data-target="#peopleCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#peopleCarousel" data-slide-to="1"></li>
+              </ol>
+              <div class="carousel-inner" role="listbox">
+                <div class="carousel-item active">
+                  <div class="card-deck" style="">
+                    <div class="card my-3">
+                        <div class="card-body">
+                          <h5 class="card-title">Desmondite 1</h5>
+                          <p class="card-text">Words, probably about Desmondite 1 but idk.</p>
+                        </div>
+                    </div>
+                    <div class="card my-3">
+                      <div class="card-body">
+                        <h5 class="card-title">Desmondite 2</h5>
+                        <p class="card-text">Words, probably about Desmondite 2 but idk.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="card-deck" style="">
+                    <div class="card my-3">
+                        <div class="card-body">
+                          <h5 class="card-title">Desmondite 3</h5>
+                          <p class="card-text">Words, probably about Desmondite 3 but idk.</p>
+                        </div>
+                    </div>
+                    <div class="card my-3">
+                      <div class="card-body">
+                        <h5 class="card-title">Desmondite 4</h5>
+                        <p class="card-text">Words, probably about Desmondite 4 but idk.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="bg-dark" id="contact">
       <div class="container">
@@ -98,12 +149,12 @@
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Plugin JavaScript -->
-    <!-- <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-    <script src="vendor/scrollreveal/scrollreveal.min.js"></script> -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- <script src="vendor/scrollreveal/scrollreveal.min.js"></script> -->
     <!-- <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script> -->
 
     <!-- Custom scripts for this template -->
-    <!-- <script src="js/creative.min.js"></script> -->
+    <script src="js/creative.min.js"></script>
 
   </body>
 
